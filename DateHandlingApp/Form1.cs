@@ -24,7 +24,18 @@ namespace DateHandlingApp
 
         private void btnCalculateDueDates_Click(object sender, EventArgs e)
         {
+            DateTime currentDate = DateTime.Today;
+            DateTime futureDate = DateTime.Parse(txtFutureDate.Text);
 
+            TimeSpan ts = futureDate.Subtract(currentDate);
+
+            int daysUntilDue = ts.Days;
+            MessageBox.Show(
+                "Current Date:\t" + currentDate.ToShortDateString() + "\n\n" +
+                "Future Date:\t" + futureDate.ToShortDateString() + "\n\n" +
+                "Days until Due:\t" + daysUntilDue,
+                "Due Days Calculation"
+                );
         }
 
         private void btnCalculateAge_Click(object sender, EventArgs e)

@@ -69,7 +69,7 @@
             this.txtBirthDate.Location = new System.Drawing.Point(242, 208);
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(150, 28);
-            this.txtBirthDate.TabIndex = 1;
+            this.txtBirthDate.TabIndex = 2;
             // 
             // btnCalculateDueDates
             // 
