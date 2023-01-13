@@ -40,6 +40,20 @@ namespace DateHandlingApp
 
         private void btnCalculateAge_Click(object sender, EventArgs e)
         {
+            DateTime currentDate = DateTime.Today;
+            DateTime birthDate = DateTime.Parse(txtBirthDate.Text);
+
+            int age = currentDate.Year - birthDate.Year;
+
+            if (currentDate.DayOfYear < birthDate.DayOfYear)
+                age--;
+
+            MessageBox.Show(
+                "Current Date:\t" + currentDate.ToLongDateString() + "\n\n" +
+                "Birth Date:\t" + birthDate.ToLongDateString() + "\n\n" +
+                "Age:\t" + age,
+                "Age Calculation"
+                );
 
         }
     }
